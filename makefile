@@ -9,6 +9,9 @@ stop:
 start:
 	docker compose start
 
+ps:
+	docker compose ps
+
 down:
 	docker compose down
 
@@ -16,4 +19,4 @@ clean:
 	docker compose down -v
 
 psql:
-	docker compose exec postgres psql -U <user> -d <db_name>
+	docker compose exec postgres psql -U <user> -d <db_name> -h localhost
