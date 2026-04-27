@@ -1,6 +1,6 @@
 -- Exercise 02: First Table - Manual Creation
 -- Table: data_2022_oct
--- Created from: utils/customer/data_2022_oct.csv
+-- Created from: ../subject/customer/data_2022_oct.csv
 
 -- Drop table if exists (for clean recreation)
 DROP TABLE IF EXISTS data_2022_oct;
@@ -25,7 +25,7 @@ CREATE INDEX idx_data_2022_oct_product_id ON data_2022_oct(product_id);
 -- Display table structure
 \d data_2022_oct
 
-\copy data_2022_oct(event_time, event_type, product_id, price, user_id, user_session) FROM '../utils/customer/data_2022_oct.csv' DELIMITER ',' CSV HEADER;
+\copy data_2022_oct(event_time, event_type, product_id, price, user_id, user_session) FROM '../subject/customer/data_2022_oct.csv' DELIMITER ',' CSV HEADER;
 
 -- Verify data loaded
 SELECT COUNT(*) as total_rows FROM data_2022_oct;

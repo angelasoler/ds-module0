@@ -45,7 +45,7 @@ echo -e "${BLUE}  Host: $DB_HOST${NC}"
 echo ""
 
 # Path to customer CSV files
-CSV_DIR="../utils/customer"
+CSV_DIR="../subject/customer"
 
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}  Exercise 03: Automatic Table Creation${NC}"

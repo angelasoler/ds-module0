@@ -1,6 +1,6 @@
 -- Exercise 04: Items Table Creation
 -- Table: items
--- Created from: utils/subject/item/item.csv
+-- Created from: ../subject/item/item.csv
 
 -- Drop table if exists (for clean recreation)
 DROP TABLE IF EXISTS items;
@@ -23,7 +23,7 @@ CREATE INDEX idx_items_brand ON items(brand);
 -- Display table structure
 \d items
 
-\copy items(product_id, category_id, category_code, brand) FROM '../utils/item/item.csv' DELIMITER ',' CSV HEADER;
+\copy items(product_id, category_id, category_code, brand) FROM '../subject/item/item.csv' DELIMITER ',' CSV HEADER;
 
 -- Verify data loaded
 SELECT COUNT(*) as total_rows FROM items;
