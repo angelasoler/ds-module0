@@ -1,1 +1,5 @@
 utils/
+.env
+ex00/postgres_data/
+subject/
+.agents/

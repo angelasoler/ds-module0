@@ -5,7 +5,9 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - ds_network
 
   pgadmin:
     image: dpage/pgadmin4
@@ -14,6 +16,10 @@ services:
       - "5050:80"
     depends_on:
       - postgres
+    networks:
+      - ds_network
 
-volumes:
-  postgres_data:
+networks:
+  ds_network:
+    name: ds_network
+    driver: bridge
